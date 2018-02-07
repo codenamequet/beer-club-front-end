@@ -20,6 +20,7 @@ class Search extends Component {
 
   constructor (props) {
     super(props)
+    // Binding should happen on the parent componet, not the child
     this.handleSearchInput = this.handleSearchInput.bind(this)
     this.onSubmitQuery = this.onSubmitQuery.bind(this)
   }

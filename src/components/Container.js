@@ -16,11 +16,13 @@ class Container extends Component {
       hasSearched: false,
       searchResults: [],
     }
+    // You should leave thses lines uncommented
     // this.handleSearchInput=this.handleSearchInput.bind(this)
     // this.onSubmitQuery=this.onSubmitQuery.bind(this)
     // this.onSearchAgain=this.onSearchAgain.bind(this)
   }
 
+  // These three methods need more review. Binding should happen on parent components. You shouldn't duplicate methods in the child component.
   handleSearchInput = (searchText) => {
     console.log(searchText)
     this.setState({query: searchText})
@@ -46,7 +48,7 @@ class Container extends Component {
     return (
       <div>
         {searched ? <Results searchResults={this.state.searchResults} onSearchAgain={this.onSearchAgain} /> : <Search handleSearchInput={this.handleSearchInput} onSubmitQuery={this.onSubmitQuery} query={this.state.query} />}
-        
+
       </div>
     )
   }
@@ -68,7 +70,7 @@ class Container extends Component {
   //     )
   //   })
   //   return (
-      
+
   //     <div className='row'>
   //       {beerKeg}
   //     </div>

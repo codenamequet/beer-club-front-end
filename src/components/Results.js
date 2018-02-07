@@ -27,7 +27,7 @@ class Results extends Component {
       isButtonDisabled: false
     })
   }
-  
+
   // componentDidMount = () => {
   // axios
   //     .get()
@@ -35,12 +35,13 @@ class Results extends Component {
 
   //     })
   // }
-  
+
   render () {
     let {searchResults} = this.props
     let beerKeg = searchResults.map((beer, index) => {
-      
+
       return (
+      // Good implementation of React Materialize
       <Card key={beer.id} className='card hoverable col s12 m3' header={<CardTitle reveal image={beer.labels ? beer.labels.medium : this.state.dummyPic} waves='light' />} title={<h6 className='' style={{fontSize: 15}}> {beer.name}</h6>}
         reveal={[
           <div>
@@ -50,16 +51,16 @@ class Results extends Component {
             <p>ABV: {beer.abv}</p>
           </div>
         ]}>
-        <Button id={'beer_' + beer._id} floating onClick={e =>this.addToCart(e, beer.id)} 
-        disabled={this.state.isButtonDisabled} 
-        className='red hoverable halfway-fab' waves='light' icon='add' 
+        <Button id={'beer_' + beer._id} floating onClick={e =>this.addToCart(e, beer.id)}
+        disabled={this.state.isButtonDisabled}
+        className='red hoverable halfway-fab' waves='light' icon='add'
         style={{position: 'absolute', bottom: 90, right: 8}} />
       </Card>
     )
     })
     return (
       <div>
-        
+
         {/* <Button waves='light' className='centered-landing-btn white'onClick={this.onSearchAgain}>Search For Another</Button> */}
       <div className='row'>
       <div className='center-align'>

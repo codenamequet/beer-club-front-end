@@ -66,6 +66,7 @@ class ShoppingCart extends Component {
     console.log(this.state.cartItems)
     let beers = this.state.cartItems.map((beer, index) => {
       return (
+        // You shouldn't bind a method inside the render method
         <ShoppingCartItem dummy={this.state.dummyPic} onUpdate={this.updateQuantity.bind(this)} beer={beer} key={index} index={index} />
       )
     })
