@@ -1,3 +1,4 @@
+// Good work
 import React, {Component} from 'react'
 import { Parallax } from 'react-parallax'
 import { Button } from 'react-materialize'

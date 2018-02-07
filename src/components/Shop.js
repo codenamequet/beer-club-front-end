@@ -2,13 +2,14 @@ import React, {Component} from 'react'
 import { Card, CardTitle, Button } from 'react-materialize'
 import axios from 'axios'
 import { Parallax } from 'react-parallax'
-import requestDBC from '../../src/request'
+import requestDBC from '../../src/request'    // Not sure what this is doing
 import { queryBrewery } from './Utils'
 import Results from './Results';
 import Search from './Search';
 import Container from './Container'
 
 class Shop extends Component {
+  // This is a container component. The constructor and the methods aren't contributing to your code
   constructor (props) {
     super(props)
     this.state = {
@@ -58,6 +59,6 @@ class Shop extends Component {
       </div>
     )
   }
-  
+
 }
 export default Shop

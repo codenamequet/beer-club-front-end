@@ -1,3 +1,4 @@
+// It's recommended that you put the React Router routes in the App component
 import React, {Component} from 'react'
 import {Navbar, NavItem, Icon} from 'react-materialize'
 import {BrowserRouter as Router, Route, Link, Redirect, Switch} from 'react-router-dom'
@@ -17,6 +18,7 @@ import SuccessPage from './SuccessPage'
 // import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 
 class Header extends Component {
+  // The state and the updateSearchTerm method aren't passed as props to any componet. They aren't contributing to you app.
   constructor (props) {
     super(props)
     this.state = {
@@ -28,7 +30,7 @@ class Header extends Component {
   updateSearchTerm = (search) => {
     this.setState({search})
   }
-  
+
 
   render () {
     return (

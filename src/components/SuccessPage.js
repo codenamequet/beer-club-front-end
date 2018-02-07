@@ -1,3 +1,4 @@
+// This component isn't rendering. I'm not sure why.
 import React, {Component} from 'react'
 import { Card, Col } from 'react-materialize'
 import '../styles/SuccessPage.css'
